@@ -4,13 +4,13 @@
 
 #### approach:
 
-1. first thing first, I'd need to translate the jsons into python hashes.
+1. first thing first, I'd need to translate the jsons into python hashes: userhash and eventhash.
 
 2. Obtain the users' names from the input.
 
-3. Generate a result hash, which has the desired dates as the keys, and arrays of (start, end) pairs to be the value
+3. Generate a result hash, which has the desired dates as the keys, and arrays of (start, end) pairs to be the values
 
-4. Use the user names to find all the events (or we can call them (start, end) pairs) that happened in the desired date-time range. Then put the (start, end) pair into the result hash according to the date.
+4. Use the user names to search the user id in user hash, and then use the user id to find all the events (or we can call them (start, end) pairs) that happened in the desired date-time range. Then append the (start, end) pair into the result hash according to the date.
 
 5. Use a logic to calculate the empty slots that available for all the users in a certain day.
 
